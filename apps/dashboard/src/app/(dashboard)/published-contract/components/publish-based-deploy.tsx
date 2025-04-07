@@ -48,7 +48,7 @@ export async function DeployFormForPublishInfo(props: PublishBasedDeployProps) {
     publishedContractVersions[0];
 
   const publishedContractNoFee = publishedContractVersions.find(
-    (v) => ZERO_FEE_VERSIONS[v.name],
+    (v) => v.version === ZERO_FEE_VERSIONS[v.name],
   );
 
   if (!publishedContract) {

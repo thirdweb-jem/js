@@ -20,7 +20,7 @@ import {
   DEFAULT_FEE_RECIPIENT,
   THIRDWEB_PUBLISHER_ADDRESS,
 } from "constants/addresses";
-import { ZERO_FEE_CHAINS, ZERO_FEE_VERSIONS } from "constants/fee-config";
+import { ZERO_FEE_CHAINS } from "constants/fee-config";
 import { SolidityInput } from "contract-ui/components/solidity-inputs";
 import { useTrack } from "hooks/analytics/useTrack";
 import { useTxNotifications } from "hooks/useTxNotifications";
@@ -528,9 +528,7 @@ export const CustomContractForm: React.FC<CustomContractFormProps> = ({
               ? JSON.parse(params.deployParams._trustedForwarders as string)
               : undefined,
           },
-          version: isFeeExempt
-            ? ZERO_FEE_VERSIONS[metadata.name]
-            : metadata.version,
+          version: isFeeExempt ? "7.0.0" : metadata.version,
         });
       }
 
@@ -565,9 +563,7 @@ export const CustomContractForm: React.FC<CustomContractFormProps> = ({
         account: activeAccount,
         chain: walletChain,
         client: thirdwebClient,
-        deployMetadata: isFeeExempt
-          ? (metadataNoFee as FetchDeployMetadataResult)
-          : metadata,
+        deployMetadata: isFeeExempt && metadataNoFee ? metadataNoFee : metadata,
         initializeParams,
         implementationConstructorParams,
         salt,
