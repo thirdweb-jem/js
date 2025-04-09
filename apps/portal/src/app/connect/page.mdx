@@ -36,11 +36,20 @@ export const metadata = createMetadata({
 
 # What is Connect?
 
-Connect is the complete toolkit for connecting every user to your application. It features customizable onboarding flows, self-custodial in-app wallets, account abstraction, onramps, and a performant API to interact with the blockchain.
+thirdweb Connect offers an efficient and flexible solution for connecting your app or game to web3, offering:
 
-## Live Playground
+- [External wallet connections](https://portal.thirdweb.com/connect/wallet/sign-in-methods/external-wallets) to over 500+ EVM compatible wallets
+- Customizable In-app wallets & ecosystem wallets to help you build unique branded experiences.
+- [Smart Wallets](https://portal.thirdweb.com/connect/account-abstraction/overview), for sponsoring user transactions for users to make your app accessible.
+- A [reliable web3 payment solution](https://portal.thirdweb.com/connect/pay/overview) for monetizing your app, including onramping, bridging + swapping—using crypto or credit cards.
+- Flexible web2 and [web3 authentication](https://portal.thirdweb.com/connect/auth) flows, to let users sign in with the email, phone, passkeys or social accounts.
+- A [performant blockchain API](https://portal.thirdweb.com/connect/blockchain-api) for performing actions such as connecting and disconnecting wallets, viewing balance, displaying ENS names, and executing transactions.
 
-You can interact with the React SDK in the [Live Playground](https://playground.thirdweb.com/).
+## Supported Chains
+
+Connect is supported on every EVM compatible chain. To view the full list, visit [thirdweb chainlist](https://thirdweb.com/chainlist).
+
+<DocImage src={SupportedChains} />
 
 <Stack>
 
@@ -53,9 +62,21 @@ You can interact with the React SDK in the [Live Playground](https://playground.
 
 </Stack>
 
-## Quick starts
+## Get started with Connect
+Find the [full guide on how to get started here](https://portal.thirdweb.com/connect/wallet/get-started) or follow these 2 simple steps:
 
-Get started with Connect in your preferred language.
+1. Create a client ID (if you haven't already). This will give you access to the Connect toolkit.
+<Callout variant="info" title="Have you generated a client ID?">
+	<div className="flex flex-col gap-4 items-start">
+
+	<Button asChild variant='outline'>
+		<Link href="https://thirdweb.com/create-api-key" target="_blank"> Generate </Link>
+	</Button>
+
+  </div>
+</Callout>
+
+2. Choose your preferred language.
 
 <Grid>
 	<SDKCard
@@ -78,33 +99,12 @@ Get started with Connect in your preferred language.
 	/>
 </Grid>
 
-## With Connect, you can
-
-- **Connect to 500+ different wallet providers** with support for every EVM network
-- **Log in and authenticate your users** with customizable and secure [email, phone, passkeys and social login](https://portal.thirdweb.com/connect/in-app-wallet/overview) flows.
-- **Sponsor transactions** to seamlessly onboard non-native or new crypto users with [Account Abstraction](https://portal.thirdweb.com/connect/account-abstraction/overview).
-- **Perform wallet actions** like connecting and disconnecting wallets, viewing balance, displaying ENS names, and execute transactions with our [performant, reliable and type safe API](https://portal.thirdweb.com/connect/blockchain-api)
-- **Easily integrate with thirdweb's contracts** to enable users to interact with your application.
-- **Facilitate payments** by letting user top up their wallets or do onchain purchases with a credit card with [Pay](https://portal.thirdweb.com/connect/pay/overview).
-
-<Callout variant="info" title="Have you generated a client ID?">
-	<div className="flex flex-col gap-4 items-start">
-	<p>
-		You'll need a client ID to access Connect's free blockchain APIs, storage, and more.
-	</p>
-
-	<Button asChild variant='outline'>
-		<Link href="https://thirdweb.com/create-api-key" target="_blank"> Generate </Link>
-	</Button>
-
   </div>
-</Callout>
 
-## Supported Chains
+## Try out thirdweb Connect in the Playground
 
-Connect is supported on every EVM compatible chain. To view the full list, visit [thirdweb chainlist](https://thirdweb.com/chainlist).
+You can interact with the React SDK in the [Live Playground](https://playground.thirdweb.com/).
 
-<DocImage src={SupportedChains} />
 
 ## Starter Kits & demos
 
